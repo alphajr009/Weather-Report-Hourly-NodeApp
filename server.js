@@ -169,6 +169,33 @@ cron.schedule('0 */3 * * *', async () =>
   }
 });
 
+app.get('/', (req, res) => {
+
+  const weatherEmoji = "☀️"; 
+
+
+  const htmlContent = `
+    <html>
+      <head>
+        <style>
+          /* Define CSS styles here */
+          h1 {
+            font-weight: bold;
+            margin-top: 24px;
+            text-align: center;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>${weatherEmoji} Hourly Weather Report App ${weatherEmoji}</h1>
+      </body>
+    </html>
+  `;
+
+  // Set the HTML content as the response
+  res.send(htmlContent);
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log('Node Server Started using Nodemon!'));
