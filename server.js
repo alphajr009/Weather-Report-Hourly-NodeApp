@@ -1,7 +1,6 @@
 const express = require("express");
 const cron = require('node-cron');
 const axios = require('axios'); 
-const cors = require('cors');
 
 const app = express();
 
@@ -17,13 +16,6 @@ const api = {
   base: process.env.OPENWEATHERMAP_BASE_URL,
   };
 
-  const corsConfig = {
-    origin: '',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}
-app.use(cors(corsConfig))
-app.options("", cors(corsConfig))
 
 app.use(express.json())
 app.use('/api/users', weatherUserRoute)
@@ -209,3 +201,5 @@ app.listen(port, () =>
   console.log('Node Server Started using Nodemon! http://localhost:5000/')
   
   );
+
+
