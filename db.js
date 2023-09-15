@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 mongoose.set('strictQuery', true);
 
-var mongoURL = 'mongodb+srv://dashitus09:tepIU5MM3Ur05NeW@travelplanner.jd67zjr.mongodb.net/'
+var mongoURL = process.env.MONGODB_URI
 
 
 mongoose.connect(process.env.MONGODB_URI || mongoURL, { useUnifiedTopology: true, useNewUrlParser: true, })
