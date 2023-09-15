@@ -20,7 +20,7 @@ To run this project locally, follow the steps below:
 
 ```bash
 git clone https://github.com/alphajr009/Weather-Report-Hourly-NodeApp.git
-cd node-weather-api
+cd Weather-Report-Hourly-NodeApp
 ```
 
 2. Install the project dependencies.
