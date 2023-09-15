@@ -20,7 +20,7 @@ const api = {
 app.use(express.json())
 app.use('/api/users', weatherUserRoute)
 
-cron.schedule('0 */3 * * *', async () => 
+cron.schedule('* * * * *', async () => 
 { 
 
   try {
